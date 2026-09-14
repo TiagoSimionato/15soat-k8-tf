@@ -21,4 +21,4 @@ jobs:
         uses: hashicorp/setup-terraform@v4
 
       - name: Terraform Init and Apply
-        run: terraform -chdir=infra init && terraform -chdir=infra apply -auto-approve
+        run: terraform -chdir=infra init && terraform -chdir=infra apply -target="kind_cluster.main" -auto-approve && terraform -chdir=infra apply -auto-approve
