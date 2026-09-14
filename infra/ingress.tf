@@ -16,7 +16,7 @@ resource "kubernetes_ingress_v1" "app" {
 
           backend {
             service {
-              name = kubernetes_service.app.metadata[0].name
+              name = "app-svc-15soat-tech-challenge"
               port {
                 number = 3000
               }
