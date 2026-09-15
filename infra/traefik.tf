@@ -79,6 +79,7 @@ resource "kubernetes_deployment" "traefik" {
             "--entrypoints.web.address=:80",
             "--entrypoints.traefik.address=:8080",
             "--providers.kubernetesingress=true",
+            "--providers.kubernetesingress.allowexternalnameservices=true",
             "--api.dashboard=true",
             "--api.insecure=true",
             "--log.level=INFO",

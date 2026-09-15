@@ -5,3 +5,7 @@ variable "cluster_name" {
 variable "namespace" {
   default = "soat-grupo76"
 }
+
+variable "serverless_port" {
+  default = "3001"
+}
