@@ -7,8 +7,9 @@ resource "kubernetes_secret" "app-secrets" {
   type = "Opaque"
 
   data = {
-    CLIENT_ID         = var.client_id
-    CLIENT_SECRET     = var.client_secret
-    JWT_SECRET        = var.jwt_secret
+    CLIENT_ID                = var.client_id
+    CLIENT_SECRET            = var.client_secret
+    AUTHORIZATION_SERVER_URL = var.authorization_server_url
+    JWT_SECRET               = var.jwt_secret
   }
 }

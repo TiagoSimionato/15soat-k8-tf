@@ -10,6 +10,7 @@ variable "serverless_port" {
   default = "3001"
 }
 
-variable "client_id"     {}
-variable "client_secret" {}
-variable "jwt_secret"    {}
+variable "client_id"                {}
+variable "client_secret"            {}
+variable "jwt_secret"               {}
+variable "authorization_server_url" { default = "" }
