@@ -13,4 +13,4 @@ variable "serverless_port" {
 variable "client_id"                {}
 variable "client_secret"            {}
 variable "jwt_secret"               {}
-variable "authorization_server_url" { default = "" }
+variable "authorization_server_url" { default = "http://svc-15soat-auth-service:3001" }
