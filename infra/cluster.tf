@@ -22,6 +22,16 @@ resource "kind_cluster" "main" {
         protocol       = "TCP"
       }
       extra_port_mappings {
+        container_port = 30001
+        host_port      = 3001
+        protocol       = "TCP"
+      }
+      extra_port_mappings {
+        container_port = 30002
+        host_port      = 3002
+        protocol       = "TCP"
+      }
+      extra_port_mappings {
         container_port = 30080
         host_port      = 8000
         protocol       = "TCP"
