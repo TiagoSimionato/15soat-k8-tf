@@ -1,4 +1,4 @@
-# 15soat Kubernetes Infrastructure
+# 15 soat Kubernetes Infrastructure
 
 This repository provisions the local Kubernetes infrastructure used by the 15soat technical challenge. It uses Terraform to create a two-node [Kind](https://kind.sigs.k8s.io/) cluster and configure the Kubernetes resources needed to expose and scale the application.
 
