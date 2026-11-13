@@ -32,6 +32,46 @@ resource "kind_cluster" "main" {
         protocol       = "TCP"
       }
       extra_port_mappings {
+        container_port = 30003
+        host_port      = 3003
+        protocol       = "TCP"
+      }
+      extra_port_mappings {
+        container_port = 30004
+        host_port      = 3004
+        protocol       = "TCP"
+      }
+      extra_port_mappings {
+        container_port = 30005
+        host_port      = 3005
+        protocol       = "TCP"
+      }
+      extra_port_mappings {
+        container_port = 30006
+        host_port      = 3006
+        protocol       = "TCP"
+      }
+      extra_port_mappings {
+        container_port = 30007
+        host_port      = 3007
+        protocol       = "TCP"
+      }
+      extra_port_mappings {
+        container_port = 30008
+        host_port      = 3008
+        protocol       = "TCP"
+      }
+      extra_port_mappings {
+        container_port = 30009
+        host_port      = 3009
+        protocol       = "TCP"
+      }
+      extra_port_mappings {
+        container_port = 30010
+        host_port      = 3010
+        protocol       = "TCP"
+      }
+      extra_port_mappings {
         container_port = 30080
         host_port      = 8000
         protocol       = "TCP"
