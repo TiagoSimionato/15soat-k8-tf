@@ -28,4 +28,6 @@ jobs:
           TF_VAR_sonar_postgres_user:     ${{ secrets.SONAR_POSTGRES_USER }}
           TF_VAR_sonar_postgres_password: ${{ secrets.SONAR_POSTGRES_PASSWORD }}
           TF_VAR_sonar_postgres_db:       ${{ secrets.SONAR_POSTGRES_DB }}
+          TF_VAR_rabbitmq_user:           ${{ secrets.RABBITMQ_USER }}
+          TF_VAR_rabbitmq_password:       ${{ secrets.RABBITMQ_PASSWORD }}
         run: terraform -chdir=infra init && terraform -chdir=infra apply -target="kind_cluster.main" -auto-approve && terraform -chdir=infra apply -auto-approve

@@ -22,3 +22,6 @@ variable "payment_service_url"      { default = "http://svc-15soat-payment-servi
 variable "sonar_postgres_user"      {}
 variable "sonar_postgres_password"  {}
 variable "sonar_postgres_db"        {}
+
+variable "rabbitmq_user"            {}
+variable "rabbitmq_password"        {}
