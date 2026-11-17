@@ -69,21 +69,23 @@ resource "kubernetes_deployment" "rabbitmq" {
           }
 
           readiness_probe {
-            http_get {
-              path = "/api/health/checks/local"
-              port = 15672
+            tcp_socket {
+              port = 5672
             }
-            initial_delay_seconds = 15
+            initial_delay_seconds = 10
             period_seconds        = 10
+            timeout_seconds       = 5
+            failure_threshold     = 3
           }
 
           liveness_probe {
-            http_get {
-              path = "/api/health/checks/local"
-              port = 15672
+            tcp_socket {
+              port = 5672
             }
             initial_delay_seconds = 30
             period_seconds        = 15
+            timeout_seconds       = 5
+            failure_threshold     = 3
           }
         }
       }
@@ -94,4 +96,3 @@ resource "kubernetes_deployment" "rabbitmq" {
     kubernetes_service.rabbitmq,
   ]
 }
-  
